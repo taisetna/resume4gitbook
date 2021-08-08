@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Contents of Projects](README.md)
+* [Chang Hyun Choi](README.md)
 
 ## KBSMEDIA\(200608~recent\) <a id="kbsmedia-200608"></a>
 
