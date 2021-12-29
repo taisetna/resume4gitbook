@@ -8,23 +8,23 @@ VERTIGO는 세로형 영상. 소위 말하는 세로 직캠 영상 제작에 특
 
 그런데 전자의 경우 인물별 동선에 따라 카메라간 간섭이 발생하다 보니 기대만큼 영상 결과물이 나오지 않을 때가 많았고, 후자의 경우 10명 이상 대규모 인원으로 구성된 아이돌에 대한 세로형 직캠 영상 제작시 인물 수에 비례하여 편집시간이 소요됨은 물론 움직이는 피사체를 편집하는 것도 또한 용이하지 않는 등의 문제가 많았다.
 
-VERTIGO는 보다 효율적이고 퀄리티 높은 세로형 영상 제작이 가능하도록 KBS 기술 연구소\(이하 연구소\)에서 개발한 얼굴 인식과 클러스터링 기술이 Face AI 엔진이 탑재된 멀티뷰 미디어 편집 솔루션으로, 현재\(21년 3월 1일 기준\) 유튜브 KBS Kpop 채널에서 서비스중인 뮤직뱅크 세로 직캠 컨텐츠인 K-FANCAM 제작에 적극 활용중에 있다.
+VERTIGO는 보다 효율적이고 퀄리티 높은 세로형 영상 제작이 가능하도록 KBS 기술 연구소(이하 연구소)에서 개발한 얼굴 인식과 클러스터링 기술이 Face AI 엔진이 탑재된 멀티뷰 미디어 편집 솔루션으로, 현재(21년 12월 29일 기준) 유튜브 KBS Kpop 채널에서 서비스중인 "뮤직뱅크" 세로 직캠 컨텐츠인 K-FANCAM 제작 및 "신상출시 편스토랑" 게스트 리액션 컨텐츠 영상 제작 등에 적극 활용중에 있다.
 
-{% embed url="https://www.youtube.com/watch?v=H3ZaV3BCRJg" caption="" %}
+{% embed url="https://www.youtube.com/watch?v=H3ZaV3BCRJg" %}
 
 본 프로젝트는 연구소에서 발주한 기능 개선건으로, 기존에 연구소에서 사용중인 2.0 버전에 대한 UI/UX 개선과 함께 고속 렌더링 모듈 연동을 통한 멀티 GPU 환경에서 렌더링 속도 향상, 세로 직캠 영상 렌더링 중 편집 작업 기능과 Face AI 엔진 분석 데이터 처리 속도 향상 등 어플리케이션 성능 향상에 초점을 맞춰 진행되었다.
 
 ## 세부내용
 
-* 기간 : 2020.06.08 ~ 2020.12.07
-* 개발 언어 : NSIS, C++, C\#\(Unity\)
+* 기간 : 2020.06.08 \~ 2020.12.07
+* 개발 언어 : NSIS, C++, C#(Unity)
 * 사용 라이브러리 및 에셋
-  * AVPro Video\(영상 재생 에셋\)
-  * VLC Unity\(영상 재생 에셋\)
-  * FileBrowserPro\(파일 처리 에셋\)
-  * SoftMaskForUGUI\(스크린 마스킹 효과 에셋\)
-  * MediaInfo\(영상 코덱, 해상도 등 영상 정보  확인 라이브러리\)
-  * Sentinel LDK\(Thales社 USB 동글 라이센스 라이브러리\)
+  * AVPro Video(영상 재생 에셋)
+  * VLC Unity(영상 재생 에셋)
+  * FileBrowserPro(파일 처리 에셋)
+  * SoftMaskForUGUI(스크린 마스킹 효과 에셋)
+  * MediaInfo(영상 코덱, 해상도 등 영상 정보  확인 라이브러리)
+  * Sentinel LDK(Thales社 USB 동글 라이센스 라이브러리)
 
 ## **담당 파트**
 
@@ -64,17 +64,17 @@ USB 동글 키는 Thales사의 Sentinel 솔루션을 사용하였는데, 이는 
 
 그러다 보니 Face AI 엔진 데이터를 사용하여 컨텐츠 제작시 작업자가 수동으로 제작할 때보다 시간이 더 오래 걸려, 엔진 데이터의 활용도가 많이 떨어졌었다.
 
-![&#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xBCD1;&#xD569;\(&#xC774;&#xC804;\)](../.gitbook/assets/merge_cluster_before.gif)
+![클러스터 병합(이전)](../.gitbook/assets/merge\_cluster\_before.gif)
 
 본 프로젝트에서는 한 화면에서 각 클러스터들을 볼 수 있도록 배치하여 전체 클러스터의 데이터를 한 눈에 확인 가능하도록 UI 를 개선하여, 보다 적극적으로 Face AI 엔진 데이터를 활용할 수 있도록 하였다
 
-![&#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xD3B8;&#xC9D1;&#xD654;&#xBA74;](../.gitbook/assets/edit_cluster.png)
+![클러스터 편집화면](../.gitbook/assets/edit\_cluster.png)
 
 키프레임 편집 기능 또한 단일/부분/전체 선택은 물론 단축키 및 마우스 드래그엔 드랍을 통한 복사/이동 기능 지원 등 기존 프로그램에 비해 사용자 편의성을 대폭 강화하였다.
 
-![&#xD0A4;&#xD504;&#xB808;&#xC784; &#xD3B8;&#xC9D1;&#xD654;&#xBA74;](../.gitbook/assets/select_keyframes.gif)
+![키프레임 편집화면](../.gitbook/assets/select\_keyframes.gif)
 
-![&#xB4DC;&#xB798;&#xADF8;&#xC5D4;&#xB4DC;&#xB78D;&#xC744; &#xC774;&#xC6A9;&#xD55C; &#xD0A4;&#xD504;&#xB808;&#xC784; &#xC774;&#xB3D9;](../.gitbook/assets/move_keyframes_by_drag_and_drop.gif)
+![드래그엔드랍을 이용한 키프레임 이동](../.gitbook/assets/move\_keyframes\_by\_drag\_and\_drop.gif)
 
 ### **커맨드 패턴 기반 Undo/ Redo 기능 개발**
 
@@ -82,9 +82,9 @@ USB 동글 키는 Thales사의 Sentinel 솔루션을 사용하였는데, 이는 
 
 따라서 본 프로젝트에서는 사용자가 현재 수행한 작업에 대하여 이를 되돌릴수 있도록 Undo/ Redo 기능을 개발하였다.
 
-![Redo, Undo &#xD504;&#xB85C;&#xC138;&#xC2A4;](../.gitbook/assets/redo_undo_process.gif)
+![Redo, Undo 프로세스](../.gitbook/assets/redo\_undo\_process.gif)
 
-Undo / Redo 기능 구현하는데는 보통 메멘토 패턴과 커맨드 패턴이 많이 쓰이는데 후자쪽이 자료가 더 많아 기능 개발하는데 있어 보다 수월할 것으로 판단하여 수월할 것으로 보여 커맨드 패턴 기반으로 개발하였다. 
+Undo / Redo 기능 구현하는데는 보통 메멘토 패턴과 커맨드 패턴이 많이 쓰이는데 후자쪽이 자료가 더 많아 기능 개발하는데 있어 보다 수월할 것으로 판단하여 수월할 것으로 보여 커맨드 패턴 기반으로 개발하였다.&#x20;
 
 또한 Undo / Redo 커맨드를 처리하는 컨트롤러는 어플리케이션 실행중 단 하나의 인스턴스만 존재해야 하는 관계로 싱글턴 패턴을 사용하였다.
 
@@ -94,21 +94,21 @@ Undo / Redo 기능 구현하는데는 보통 메멘토 패턴과 커맨드 패�
 
 이번 프로젝트에서는 작업 영상에 삽입한 이미지의 사이즈 및 위치 조절이 가능한 이미지 오버레이 기능을 제공하여 영상 편집툴 사용 없이 바로 결과 영상물을 만들 수 있도록 하였다.
 
-![&#xC774;&#xBBF8;&#xC9C0; &#xC624;&#xBC84;&#xB808;&#xC774; &#xC791;&#xC5C5;&#xD654;&#xBA74;](../.gitbook/assets/image_overlay_workprocess.gif)
+![이미지 오버레이 작업화면](../.gitbook/assets/image\_overlay\_workprocess.gif)
 
 또한 해당 화면에서 추가한 키프레임들을 기반으로 한 영상 재생 기능도 구현하여 작업한 결과물을 렌더링 전 미리 확인할 수 있는 프리뷰 기능도 기능도 제공하였다.
 
-![&#xC774;&#xBBF8;&#xC9C0; &#xC624;&#xBC84;&#xB808;&#xC774; &#xD504;&#xB9AC;&#xBDF0;&#xD654;&#xBA74;](../.gitbook/assets/play_video_image_overlay.gif)
+![이미지 오버레이 프리뷰화면](../.gitbook/assets/play\_video\_image\_overlay.gif)
 
 ### **어플리케이션 UI/UX 개선**
 
 어플리케이션 화면에도 큰 변화가 있었다. 기존 화면의 경우 각 패널이나 컨트롤들의 색상이라던가 혹은 컨트롤들의 배치가 그때 그때 필요에 의해 추가되다 보니 다소 산만한 감이 없잖아 있었다.
 
-![&#xBE44;&#xB514;&#xC624; &#xB85C;&#xB529;&#xD654;&#xBA74;\(&#xC774;&#xC804;\)](../.gitbook/assets/load_video_before.gif)
+![비디오 로딩화면(이전)](../.gitbook/assets/load\_video\_before.gif)
 
 이번 프로젝트에서는 내부 디자이너의 도움을 받아 전체적인 색상 톤을 통일하고 패널 및 컨트롤들도 새로 디자인한 리소스들로 교체하였다.
 
-![&#xBE44;&#xB514;&#xC624; &#xB85C;&#xB529;&#xD654;&#xBA74;\(&#xD604;&#xC7AC;\)](../.gitbook/assets/load_video_after.gif)
+![비디오 로딩화면(현재)](../.gitbook/assets/load\_video\_after.gif)
 
 화면 상단에 배치되어 있던 각종 컨트롤들은 사용 목적에 맞게 재배치 되었다. 그 결과 영상 관련 컨트롤들은 영상 재생 화면 하단에, Face AI 엔진 실행 등 그 외 컨트롤들은 화면 상단에 새로 추가된 메뉴 패널로 옮겨졌다.
 
@@ -120,13 +120,13 @@ Undo / Redo 기능 구현하는데는 보통 메멘토 패턴과 커맨드 패�
 
 API 및 다이얼로그 동작 프로세스는 Winfrom 및 MFC를 참고하여 설계 및 구현 하였다.
 
-![&#xBAA8;&#xB2EC; &#xB2E4;&#xC774;&#xC5BC;&#xB85C;&#xADF8; &#xB370;&#xBAA8;](../.gitbook/assets/show_modal_dialogs.gif)
+![모달 다이얼로그 데모](../.gitbook/assets/show\_modal\_dialogs.gif)
 
-![&#xBAA8;&#xB2EC;&#xB9AC;&#xC2A4; &#xB2E4;&#xC774;&#xC5BC;&#xB85C;&#xADF8; &#xB370;&#xBAA8;](../.gitbook/assets/show_modaless_dialogs.gif)
+![모달리스 다이얼로그 데모](../.gitbook/assets/show\_modaless\_dialogs.gif)
 
 ### **NSIS를 활용한 어플리케이션 인스톨 및 업데이트 등 패키지 유지 관리 환경 구축**
 
-본 프로젝트에서 이전과 비교해서 개선된 사항을 하나 더 꼽자면 프로그램을 압축파일\(ZIP\)이 아닌 인스톨 파일 형태로 배포하게 되었다는 점이다.
+본 프로젝트에서 이전과 비교해서 개선된 사항을 하나 더 꼽자면 프로그램을 압축파일(ZIP)이 아닌 인스톨 파일 형태로 배포하게 되었다는 점이다.
 
 특히 이번 프로젝트에서 개발한 프로그램 사용을 위해서는 HEVC 코덱 같이 부수적으로 설치되어야 하는 패키지들이 있었는데, 이를 기존 환경에 배포할 경우 사용자가 패키지들을 하나하나 수동으로 설치해야 하는 번거로움이 있었다.
 
@@ -134,7 +134,7 @@ API 및 다이얼로그 동작 프로세스는 Winfrom 및 MFC를 참고하여 �
 
 초기 검토 단계에서 Install Shield, InnoSetup, Wix, NSIS 등 여러가지 인스톨러 제작 솔루션중에서 NSIS 를 선택하였는데, 인스톨러 제작에 참고할 자료들이 풍부했을 뿐만 아니라 패키징 할 때 특수 압축 방식을 이용하여 오버헤드가 적고, 파일의 크기도 다른 솔루션에 비해 작아 대용량의 어플리케이션을 패키징 할 때 유리한 점도 있었기 때문이였다.
 
-![&#xC778;&#xC2A4;&#xD1A8; &#xC9C4;&#xD589;&#xD654;&#xBA74;](../.gitbook/assets/install_process.gif)
+![인스톨 진행화면](../.gitbook/assets/install\_process.gif)
 
 또한 외부에 구축된 업데이트 서버와 연동하여 카카오톡과 같이 실행시 신규 버전이 있는 경우 자동으로 업데이트 하는 기능도 구현하여, 신규 버전 릴리즈시 사용중인 장비에 따로 재설치 없이 항상 최신 버전을 유지할 수 있도록 환경을 구축할 수 있었다.
 
@@ -156,11 +156,10 @@ API 및 다이얼로그 동작 프로세스는 Winfrom 및 MFC를 참고하여 �
 
 ## 스크린샷
 
-![&#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xBA54;&#xC778; &#xD654;&#xBA74;](../.gitbook/assets/screenshot_vertigo_main_screen.png)
+![프로그램 메인 화면](../.gitbook/assets/screenshot\_vertigo\_main\_screen.png)
 
-![AI &#xC5D4;&#xC9C4; &#xBD84;&#xC11D;&#xD654;&#xBA74;](../.gitbook/assets/screenshot_vertigo_analyze_ai_engine.png)
+![AI 엔진 분석화면](../.gitbook/assets/screenshot\_vertigo\_analyze\_ai\_engine.png)
 
-![&#xB80C;&#xB354;&#xB9C1; &#xC791;&#xC5C5; &#xCD94;&#xAC00; &#xB370;&#xBAA8;](../.gitbook/assets/rendering_process.gif)
+![렌더링 작업 추가 데모](../.gitbook/assets/rendering\_process.gif)
 
-![AI &#xD0A4;&#xD504;&#xB808;&#xC784; &#xBBFC;&#xAC10;&#xB3C4; &#xC870;&#xC808; &#xB370;&#xBAA8;](../.gitbook/assets/adjust_ai_keyframe_sensitive_process.gif)
-
+![AI 키프레임 민감도 조절 데모](../.gitbook/assets/adjust\_ai\_keyframe\_sensitive\_process.gif)
