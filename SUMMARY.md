@@ -2,9 +2,9 @@
 
 * [Chang Hyun Choi](README.md)
 
-## KBSMEDIA(200608\~220318) <a href="#kbsmedia-200608" id="kbsmedia-200608"></a>
+## KBSMEDIA(200608\~220318)
 
-* [AI 기반 멀티뷰 미디어 편집 솔루션 VERTIGO 기능 개선 개발](kbsmedia-200608/ai-vertigo.md)
+* [AI 기반 멀티뷰 미디어 편집 솔루션 VERTIGO 기능 개선 개발](kbsmedia-200608-220318/ai-vertigo.md)
 
 ## DONGILVISION(170309\~200531)
 
